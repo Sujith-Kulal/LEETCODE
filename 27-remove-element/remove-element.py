@@ -1,6 +1,6 @@
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
-        # Use enumerate to simplify loop iteration pattern
+        # Simplified loop iteration pattern
         k = 0
         for num in nums:
             if num != val:
