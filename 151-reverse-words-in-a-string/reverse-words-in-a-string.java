@@ -1,16 +1,13 @@
-public class Solution {
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+class Solution {
     public String reverseWords(String s) {
+        // Simplified to eliminate duplicate append logic
         String[] words = s.trim().split("\\s+");
-
-        StringBuilder sb = new StringBuilder();
-
-        for (int i = words.length - 1; i >= 0; i--) {
-            sb.append(words[i]);
-            if (i != 0) {
-                sb.append(" ");
-            }
-        }
-
-        return sb.toString();
+        List<String> wordList = Arrays.asList(words);
+        Collections.reverse(wordList);
+        return String.join(" ", wordList);
     }
 }

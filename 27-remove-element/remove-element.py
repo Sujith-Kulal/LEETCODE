@@ -1,11 +1,9 @@
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
-        # Initialize k (the "write" pointer) to 0
+        # Use enumerate to simplify loop iteration pattern
         k = 0
-        
-        for i in range(len(nums)):
-            if nums[i] != val:
-                nums[k] = nums[i]
+        for num in nums:
+            if num != val:
+                nums[k] = num
                 k += 1
-                
         return k
