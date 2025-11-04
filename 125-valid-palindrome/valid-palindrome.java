@@ -7,17 +7,12 @@ class Solution {
 
       while(start < end)
       {
-        if(s.charAt(start)==s.charAt(end))
+        if(s.charAt(start) != s.charAt(end))
         {
-            start ++;
-            end--;
-            
-            
+            return false;
         }
-        else{
-        return false;
-        }
-        
+        start++;
+        end--;
       }
       return true;
 
